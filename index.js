@@ -24,6 +24,6 @@ app
 .listen(3000, () => {
   console.log('Server listening on port 3000');
 })
-.on("error", (e) => {
-  console.error(e)
-})
+.on("error", console.error)
+
+process.on("uncaughtException",console.error)
