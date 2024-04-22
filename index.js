@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 });
 app.get('/results', async (req,res) => {
   if (req.query["search_query"] == undefined) return res.status(400).send("ERROR!!\nyou must set the search param.")
-  const searchText = encodeURIComponent(req.query["search_query"])
+  const searchText = decodeURIComponent(req.query["search_query"])
   const youtubeData = await (await fetch(`https://www.youtube.com/results?search_query=${searchText}`)).text()
   res.send(youtubeData)
 })
