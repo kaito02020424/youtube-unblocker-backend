@@ -1,0 +1,19 @@
+<body>
+    <p>
+        <input type="text" , id="searchText">
+        <input type="button" value="Search" id="searchButton">
+    </p>
+</body>
+
+<script>
+    document
+        .getElementById("searchButton")
+        .addEventListener("click", () => {
+            const searchText = document.getElementById("searchText").value
+            const urlSearchParams = new URLSearchParams(location.search)
+            // set
+            urlSearchParams.set("search_query", encodeURIComponent(searchText))
+            history.replaceState("", "", `?${urlSearchParams.toString()}`)
+            location.pathname = "/results"
+        })
+</script>

@@ -1,0 +1,17 @@
+{
+  "name": "youtube-unblocker-backend",
+  "version": "1.0.0",
+  "description": "> [!warning] > このプログラムは学校での研究目的です。使用した際に生じた損害については一切の責任を負いません。   > また、このプログラムでは[YouTube](https://www.youtube.com)のスクレイピングを行いますが、本来規約で禁止されていることを理解したうえで利用してください。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kaito02020424",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "@types/node": "^20.12.7"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
