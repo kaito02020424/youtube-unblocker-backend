@@ -20,6 +20,10 @@ app.get('/watch', async (req,res) => {
   res.send(content)
 })
 
-app.listen(3000, () => {
+app
+.listen(3000, () => {
   console.log('Server listening on port 3000');
-});
+})
+.on("error", (e) => {
+  console.error(e)
+})
